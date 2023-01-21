@@ -7,4 +7,32 @@ import { Component } from '@angular/core';
 })
 export class FormularioComponent {
 
+  paisSeleccionado='Argentina';
+  categoriaSeleccionada='General';
+
+  categorias: any[]=[
+    {value:'general', name:'General' },
+    {value:'business', name:'Negocios'},
+    {value:'sports', name:'Deportes'},
+    {value:'entretaiment', name:'General' },
+    {value:'health', name:'Negocios'},
+    {value:'science', name:'Deportes'},
+    {value:'tecnology', name:'General' },    
+  ]
+
+  paises: any[]=[
+    {value:'ar', name:'Argentina' },
+    {value:'br', name:'Brasil'},
+    {value:'fr', name:'Francia'},
+    {value:'hu', name:'Hungria' },
+    {value:'mx', name:'Mexico'},
+    {value:'gb', name:'Gran Bretaña'},
+       
+  ]
+
+  buscarNoticia (){
+    console.log (this.categoriaSeleccionada);
+    console.log (this.paisSeleccionado);
+  }
+
 }
