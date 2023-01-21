@@ -1,0 +1,19 @@
+.heading{
+    font-family: 'Raleway';
+    text-align: center;
+    text-transform: uppercase;
+}
+.btn{
+    display: flex;
+    width: 80%;
+    margin-top: 15px;   
+    flex-direction: column;    
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.divbtn{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
