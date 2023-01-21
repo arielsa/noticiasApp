@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  buscarNoticias(parametros:any){
+    console.log('soy el padre')
+    console.log(parametros)
+
+  }
+
   title = 'noticias';
 }

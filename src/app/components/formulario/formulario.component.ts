@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-formulario',
@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent {
+
+  @Output () parametroSeleccionado = new EventEmitter <any> ()
 
   paisSeleccionado='Argentina';
   categoriaSeleccionada='General';
@@ -31,8 +33,17 @@ export class FormularioComponent {
   ]
 
   buscarNoticia (){
-    console.log (this.categoriaSeleccionada);
-    console.log (this.paisSeleccionado);
+   
+    const PARAMETROS = {
+      categoria : this.categoriaSeleccionada,
+      pais: this.paisSeleccionado
+    } 
+    
+    this.parametroSeleccionado.emit(PARAMETROS)
+
   }
+
+ 
+
 
 }
