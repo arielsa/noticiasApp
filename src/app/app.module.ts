@@ -8,6 +8,9 @@ import { FormularioComponent } from './components/formulario/formulario.componen
 import { ListadoNoticiasComponent } from './components/listado-noticias/listado-noticias.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -15,12 +18,15 @@ import { SpinnerComponent } from './shared/spinner/spinner.component';
     FormularioComponent,
     ListadoNoticiasComponent,
     NavbarComponent,
-    SpinnerComponent
+    SpinnerComponent,
+   
   ],
   imports: [
+    RouterModule,
     HttpClientModule,
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
